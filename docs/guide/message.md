@@ -343,7 +343,7 @@ bot.on("message", (message) => {
 
 ### message.say(textOrContactOrFileOrUrlLinkOrMiniProgramOrLocation) ⇒ Promise
 
-> 通过该方法，你可以回复消息内容，目前支持 6 种消息类型, 此功能是基于你使用的 puppet 实现的，参考 [puppet 功能对比](https://github.com/wechaty/wechaty/wiki/Puppet#3-puppet-compatible-table)
+> 通过该方法，你可以回复消息内容，目前支持 6 种消息类型, 此功能是基于你使用的 puppet 实现的，参考 [puppet 功能对比](/guide/puppet.md)
 
 ```js
 import { WechatyBuilder } from "wechaty";
@@ -626,7 +626,7 @@ bot.on("message", (message) => {
 
 ### message.toUrlLink() ⇒ Promise
 
-> 该方法从消息中提取 Url 链接，并将其封装到 UrlLink 类中，此功能是基于你使用的 puppet 实现的，参考 [puppet 功能对比](https://github.com/wechaty/wechaty/wiki/Puppet#3-puppet-compatible-table)
+> 该方法从消息中提取 Url 链接，并将其封装到 UrlLink 类中，此功能是基于你使用的 puppet 实现的，参考 [puppet 功能对比](/guide/puppet.md)
 
 ```js
 import { WechatyBuilder, types } from "wechaty";

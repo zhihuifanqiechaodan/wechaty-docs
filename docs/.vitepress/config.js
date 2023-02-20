@@ -1,6 +1,7 @@
 export default {
   title: " ",
   description: "Just playing around.",
+  base: "/wechaty-docs/",
   lastUpdated: true,
   themeConfig: {
     logo: "/wechaty-logo.svg",
@@ -28,7 +29,8 @@ export default {
           collapsed: false,
           items: [
             { text: "API 概述", link: "/guide/" },
-            { text: "消息", link: "/guide/message" },
+            { text: "Puppet", link: "/guide/puppet" },
+            { text: "Message", link: "/guide/message" },
           ],
         },
       ],
