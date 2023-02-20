@@ -6,7 +6,7 @@ API——应用程序编程接口是一种向其他软件服务提供服务的�
 
 导入 Wechaty API 如下所示：
 
-```sh
+```js
 # 1.x 版本
 import { WechatyBuilder } from 'wechaty'
 ```

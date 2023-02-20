@@ -13,9 +13,9 @@ hero:
   actions:
     - theme: brand
       text: 让我们开始
-      link: /home.md
+      link: /guide/
 features:
-  - icon: 
+  - icon:
       src: /node-logo.svg
     title: NodeJS开发
     details: 文档以 NodeJS 作为开发语言，进行代码示例和介绍，其他语言开发和交互示例请查看英文原版官网，文档涵盖了您需要了解的有关 Wechaty 的所有信息，通过本文档你可以以 NodeJS 开发一个属于自己的微信机器人。
