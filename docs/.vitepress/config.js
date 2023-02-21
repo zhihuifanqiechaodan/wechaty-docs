@@ -30,6 +30,7 @@ export default {
           items: [
             { text: "API 概述", link: "/guide/" },
             { text: "Puppet", link: "/guide/puppet" },
+            { text: "Wechaty", link: "/guide/wechaty" },
             { text: "Message", link: "/guide/message" },
           ],
         },

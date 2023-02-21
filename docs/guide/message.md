@@ -10,8 +10,8 @@
 
 | 实例方法                     | 返回类型            |
 | ---------------------------- | ------------------- |
-| talker() to replace from()   | `Contact` or `null` |
-| to()                         | `Contact` or `null` |
+| talker() `to replace` from() | `Contact` or `null` |
+| listener()`to replace`to()   | `Contact` or `null` |
 | room()                       | `Room` or `null`    |
 | text()                       | `string`            |
 | say(text Or Contact Or File) | `Promise`           |
@@ -167,6 +167,30 @@ MessageType {
 }
 ```
 
+#### UrlLink
+
+```js
+// padlocal puppet
+WechatifiedUrlLinkImpl {
+  payload: {
+    description: 'vue3-admin-template 是一个后台前端解决方案，它基于 vue 和 element-plus实现，它使用了最新的前端技术栈，内置了动态路由，权限验证，提供了多种布局方式。',
+    thumbnailUrl: '',
+    title: 'vue3高级指南-基于vue3-admin-template开发vue3管理后台 - 掘金',
+    url: 'https://juejin.cn/post/7158671341086834724'
+  }
+}
+
+// workPro puppet
+WechatifiedUrlLinkImpl {
+  payload: {
+    title: 'vue3高级指南-基于vue3-admin-template开发vue3管理后台 - 掘金',
+    url: 'https://juejin.cn/post/7158671341086834724',
+    description: 'vue3-admin-template 是一个后台前端解决方案，它基于 vue 和 element-plus实现，它使用了最新的前端技术栈，内置了动态路由，权限验证，提供了多种布局方式。',
+    thumbnailUrl: 'https://workpro.s3.cn-northwest-1.amazonaws.com.cn/link_msg/ed978e61-5219-4521-9f42-9e1f0c1cba10/cd6127d4-1d9a-48e0-8255-2ef3236c9bd9.jpg'
+  }
+}
+```
+
 ## 实例方法
 
 ### message
@@ -213,30 +237,6 @@ WechatifiedMessageImpl {
 }
 ```
 
-#### UrlLink
-
-```js
-// padlocal puppet
-WechatifiedUrlLinkImpl {
-  payload: {
-    description: 'vue3-admin-template 是一个后台前端解决方案，它基于 vue 和 element-plus实现，它使用了最新的前端技术栈，内置了动态路由，权限验证，提供了多种布局方式。',
-    thumbnailUrl: '',
-    title: 'vue3高级指南-基于vue3-admin-template开发vue3管理后台 - 掘金',
-    url: 'https://juejin.cn/post/7158671341086834724'
-  }
-}
-
-// workPro puppet
-WechatifiedUrlLinkImpl {
-  payload: {
-    title: 'vue3高级指南-基于vue3-admin-template开发vue3管理后台 - 掘金',
-    url: 'https://juejin.cn/post/7158671341086834724',
-    description: 'vue3-admin-template 是一个后台前端解决方案，它基于 vue 和 element-plus实现，它使用了最新的前端技术栈，内置了动态路由，权限验证，提供了多种布局方式。',
-    thumbnailUrl: 'https://workpro.s3.cn-northwest-1.amazonaws.com.cn/link_msg/ed978e61-5219-4521-9f42-9e1f0c1cba10/cd6127d4-1d9a-48e0-8255-2ef3236c9bd9.jpg'
-  }
-}
-```
-
 ### `message.talker()` to replace `message.from()` ⇒ Contact | null
 
 > 通过此方法，可以从消息中获取发送消息人的详情信息，如果没有找到返回 null
@@ -253,7 +253,7 @@ const bot = new WechatyBuilder({
 });
 
 bot.on("message", (message) => {
-  const talker = message.talker();
+  const contact = message.talker();
 });
 ```
 
@@ -314,7 +314,7 @@ const bot = new WechatyBuilder({
 
 bot.on("message", (message) => {
   if (types.Message.Text === message.payload.type) {
-    const room = message.text();
+    const text = message.text();
   }
 });
 ```
