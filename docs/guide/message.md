@@ -382,8 +382,7 @@ bot.on("message", async (message) => {
 
   // 发送 url链接
   if (/^link$/i.test(text)) {
-    // 目前 UrlLink 这个类在1.x版本没有找到如何导入，后续找到后更新
-    const urlLink = new UrlLink({
+    const urlLink = new bot.UrlLink({
       description:
         "Wechaty is a Bot SDK for Wechat Individual Account which can help you create a bot in 6 lines of javascript, with cross-platform support including Linux, Windows, Darwin(OSX/Mac) and Docker.",
       thumbnailUrl:
@@ -397,8 +396,8 @@ bot.on("message", async (message) => {
 
   // 发送小程序
   if (/^miniProgram$/i.test(text)) {
-    // 目前 MiniProgram 这个类在1.x版本没有找到如何导入，后续找到后更新
-    const miniProgramPayload = new MiniProgram({
+    // 目前在padlocal 和 workPro puppet都尝试了，有报错发送不成功，不知道为啥后续更新
+    const miniProgramPayload = new bot.MiniProgram({
       username: "gh_xxxxxxx", //get from mp.weixin.qq.com
       appid: "", //optional, get from mp.weixin.qq.com
       title: "", //optional
@@ -412,7 +411,7 @@ bot.on("message", async (message) => {
   // 发送位置
   if (/^location$/i.test(text)) {
     // 目前 Location 这个类在1.x版本没有找到如何导入，后续找到后更新
-    const location = new Location({
+    const location = new bot.Location({
       accuracy: 15,
       address: "北京市北京市海淀区45 Chengfu Rd",
       latitude: 39.995120999999997,
